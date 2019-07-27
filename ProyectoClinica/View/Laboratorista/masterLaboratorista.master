@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Controller/ConLaboratorista/masterLaboratorista.master.cs"
+    Inherits="View_Laboratorista_masterLaboratorista" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+     <title>Inicio Laboratorista</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+
+    <link type="text/css" href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+       <link rel="stylesheet" href="../../css/css/all.min.css" />
+
+    <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/popper.min.js" ></script>
+    <script type="text/javascript" src="../../Scripts/popper.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body >
+    <form id="form_administrador" runat="server">
+                
+       
+    <div class="container-fluid" style="background-color:#333A41">
+      <div class="row">
+        <div class="col" style="color:white;text-align:center;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+            
+            <h1 style="padding-top:10px;font-size:40px;">PROYECTO <br />CLINICA</h1>
+            Area Laboratorista
+        </div>
+        <div class="col" style="background-color:white;text-align:center">
+          
+            <asp:Image ID="Image2" runat="server" ImageUrl="~/Imagenes/Proyecto/logo.png" Width="50%" />
+          
+        </div>
+      </div>
+    </div>
+            
+       
+           <div class="row">
+               <div class="col-3" style="background-color:#333A41 ;height:550px;text-align:center" >
+
+                <asp:Image ID="Image1" runat="server" ImageUrl="" Width="50%" CssClass="rounded-circle" />
+                <asp:Button ID="but_cerrar" runat="server" OnClick="but_cerrar_Click" Text="Cerrar Sesion" />
+
+                   <br />
+                   <br />
+                
+                   
+                  <asp:HyperLink ID="HL_inicio_pac"  style="color:white;text-align:center" runat="server" NavigateUrl="~/View/Laboratorista/indexLaboratorista.aspx">
+                  <span class="fa fa-home" style="font-size:x-large;font-weight:bold;color:white"></span>
+                   Inicio
+                </asp:HyperLink><br />
+                     <asp:HyperLink ID="HL_Pedido"  style="color:white;text-align:center" runat="server" NavigateUrl="~/View/Laboratorista/anadirPedido.aspx">
+                  <span class="fa fa-home" style="font-size:x-large;font-weight:bold;color:white"></span>
+                   Realizar Pedido
+                </asp:HyperLink><br />
+                     <asp:HyperLink ID="HL_ana_Med"  style="color:white;text-align:center" runat="server" NavigateUrl="~/View/Laboratorista/anadirMedicamentos.aspx">
+                  <span class="fa fa-home" style="font-size:x-large;font-weight:bold;color:white"></span>
+                   Pedidos
+                </asp:HyperLink><br />
+                     <asp:HyperLink ID="HL_reg_med"  style="color:white;text-align:center" runat="server" NavigateUrl="~/View/Laboratorista/registarMedicamentos.aspx">
+                  <span class="fa fa-home" style="font-size:x-large;font-weight:bold;color:white"></span>
+                   Registar Medicamento
+                </asp:HyperLink><br />
+                     <asp:HyperLink ID="HL_medicamento"  style="color:white;text-align:center" runat="server" NavigateUrl="~/View/Laboratorista/verMedicamentos.aspx">
+                  <span class="fa fa-home" style="font-size:x-large;font-weight:bold;color:white"></span>
+                   Medicamentos Sede
+                </asp:HyperLink><br />
+                        <asp:HyperLink ID="HyperLink1"  style="color:white;text-align:center" runat="server" NavigateUrl="~/View/Laboratorista/verInventario.aspx">
+                  <span class="fa fa-home" style="font-size:x-large;font-weight:bold;color:white"></span>
+                   Inventario de la Sede
+                </asp:HyperLink><br />
+
+
+
+
+               </div>
+               <div class="col-9">
+                     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                      </asp:ContentPlaceHolder>
+               </div>
+           </div>
+    
+    
+    
+       
+    
+    
+    <div class="container-fluid" >
+        
+          <div class="row">
+            <div class="col">
+             Footer
+            </div>
+            <div class="col">
+              columna
+            </div>
+          </div>
+        
+ </div>
+    </form>
+</body>
+</html>

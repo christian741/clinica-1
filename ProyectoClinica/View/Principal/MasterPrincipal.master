@@ -1,0 +1,177 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Controller/ConPrincipal/MasterPrincipal.master.cs" Inherits="View_Principal_MasterPrincipal" %>
+<%@ Register Assembly = "AjaxControlToolkit" Namespace = "AjaxControlToolkit" TagPrefix = "cc1"%>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link type="text/css" href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+   <link rel="stylesheet" href="../../css/css/all.min.css" />
+   </head>
+<body >
+    
+    <form id="form1" runat="server">
+    <div class="container-fluid" style="background-color:#5499C7">
+      <div class="row">
+        <div class="col" style="color:white;text-align:center;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+            
+            <h1 style="padding-top:10px;font-size:40px;">PROYECTO <br />CLINICA</h1>
+            
+        </div>
+        <div class="col" style="background-color:white;text-align:center">
+          
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Imagenes/Proyecto/logo.png" Width="50%" />
+          
+        </div>
+      </div>
+      <div class="row" style="padding-top:10px;">
+        <div class="col"  style="text-align:center;">
+            <asp:HyperLink ID="HLink_Inicio"  style="color:white" runat="server" NavigateUrl="~/View/Principal/Index.aspx">
+               <span class="fa fa-home" style="font-size:x-large;font-weight:bold;color:white"></span><br />
+                Inicio
+            </asp:HyperLink>
+        </div>
+    
+        <div class="col" style="text-align:center;">
+            <asp:HyperLink ID="HLink_Nosotros" style="color:white" runat="server" NavigateUrl="~/View/Principal/Nosotros.aspx">
+             <span class="fa fa-hospital" style="font-size:x-large;font-weight:bold;color:white;"></span><br />
+                Nosotros</asp:HyperLink>
+            
+        </div>
+        <div class="col" style="text-align:center;">
+            <asp:HyperLink ID="HLink_Contactenos" style="color:white" runat="server" NavigateUrl="~/View/Principal/Contactenos.aspx">
+            <span class="fa fa-phone-office" style="font-size:x-large;font-weight:bold;color:white"></span><br />
+            Contactenos</asp:HyperLink>
+        </div>
+        <div class="col" style="text-align:center;">
+           <asp:HyperLink ID="HLink_Galeria" style="color:white" runat="server" NavigateUrl="~/View/Principal/Galeria.aspx">
+              <span class="fa fa-images" style="font-size:x-large;font-weight:bold;color:white"></span><br />
+               Galeria</asp:HyperLink>
+        </div>
+        <div class="col" style="text-align:center;">
+            <asp:HyperLink ID="HLink_Registro" style="color:white"  runat="server" NavigateUrl="~/View/Principal/Registro.aspx">
+              <span class="fa fa-user-plus" style="font-size:x-large;font-weight:bold;color:white"></span><br />
+
+                Registro</asp:HyperLink>
+
+        </div>
+        <div class="col" >
+
+           <!-- Button trigger modal -->
+                <button type="button" style="padding-left:40%;padding-right:43%;font-weight:bold;text-align:center;color:white" class="btn btn-outline-primary" data-toggle="modal" data-target="#LoginModal">
+                <span class="fa fa-user-friends" style="font-size:x-large;font-weight:bold;color:white"></span>Login
+
+                </button>
+                <!-- Fin de botton trigger-->
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModal_1" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header" style="background-color:black;color:white;text-align:center">
+                        <div class="modal-title" id="LoginModal_1" style="text-align:center" >
+                            <h2>LOGIN</h2>
+                            </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                         <span class="fa fa-user" style="font-size:x-large;font-weight:bold;color:#1F618D  "></span>
+                         <asp:Label ID="label_Cedula" runat="server" Text=" Cedula :"></asp:Label>
+
+                          <br />
+                         <asp:TextBox ID="text_cedula" runat="server" TextMode="Number"  MaxLength="10"  placeholder="Digite su cedula" ></asp:TextBox>
+                          <br />
+                         <span class="fa fa-lock" style="font-size:x-large;font-weight:bold;color:#F1C40F"></span>
+
+                         <asp:Label ID="label_contraseña" runat="server" Text=" Contraseña :"></asp:Label>
+
+                          <br />
+                         <asp:TextBox ID="text_contraseña" runat="server" style="padding-right:200px" TextMode="Password" MaxLength="12" placeholder="Digite su contraseña"></asp:TextBox>
+                          <br />
+                          </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Salir</button>
+                       <asp:Button class="btn btn-primary" ID="button_ingresar" runat="server"  Text="Ingresar" OnClick="button_ingresar_Click" />
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Fin del Modal-->
+        </div>
+      </div>
+    </div>
+       
+        <asp:Panel ID="ModalPanel" runat="server">
+         
+           <div class="alert alert-danger" >
+ 
+                <asp:Label ID="label_advertencia" runat="server" Text=""></asp:Label><br /> <br />
+                       
+             </div>
+            <asp:Button CssClass="btn btn-outline-danger"  id="but_aceptar" runat="server" text="Aceptar" OnClick="but_aceptar_Click"  />
+
+       
+        
+        </asp:Panel>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            
+        
+        </asp:ContentPlaceHolder>
+    </>
+                 <div class="container-fluid" style="background-color:#5499C7;color:white;">
+
+     <asp:Repeater ID="Repe_Sede" runat="server" DataSourceID="OBDS_sede">
+         <ItemTemplate>
+                <div class="container">
+                  <div class="row">
+                    <div class="col">
+                        
+                         <asp:Label ID="label_sede" runat="server" Text="Sedes  "></asp:Label><br /> 
+                         <asp:Label ID="label_nombre" runat="server" Text='<%# Bind("nombre") %>'></asp:Label>
+                           
+                    </div>
+                    <div class="col">
+                      
+                         <asp:Label ID="label_telefono" runat="server" Text="Ciudad"></asp:Label><br /> 
+                         <asp:Label ID="label_tel" runat="server" Text='<%# Bind("Ciudad") %>'></asp:Label>
+                           
+                    </div>
+                    <div class="col">
+                        <asp:Label ID="label_dir" runat="server" Text="Direccion  "></asp:Label><br /> 
+                         <asp:Label ID="label_direc" runat="server" Text='<%# Bind("direccion") %>'></asp:Label>
+                           
+                    </div>
+                    
+                  </div>
+                </div>
+          </ItemTemplate>
+     </asp:Repeater>
+        <asp:ObjectDataSource ID="OBDS_sede" runat="server" SelectMethod="traer_sede" TypeName="DAOSede"></asp:ObjectDataSource>
+        
+                   </div>
+               
+        
+  </form>
+
+</body>
+    
+     <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/popper.min.js" ></script>
+    <script type="text/javascript" src="../../Scripts/popper.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</html>

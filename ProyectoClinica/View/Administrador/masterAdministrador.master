@@ -1,0 +1,161 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Controller/ConAdministrador/masterAdministrador.master.cs" 
+    Inherits="View_Administrador_masterAdministrador" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Inicio Administrador</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+
+    <link type="text/css" href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+       <link rel="stylesheet" href="../../css/css/all.min.css" />
+
+    <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/popper.min.js" ></script>
+    <script type="text/javascript" src="../../Scripts/popper.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body style="margin:0" >
+    <form id="form_administrador" runat="server">
+                
+       
+    <div class="container-fluid" style="background-color:#333A41">
+      <div class="row">
+        <div class="col" style="color:white;text-align:center;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+            
+            <h1 style="padding-top:10px;font-size:40px;">PROYECTO <br />CLINICA</h1>
+            
+        </div>
+        <div class="col" style="background-color:white;text-align:center">
+          
+            <asp:Image ID="Image2" runat="server" ImageUrl="~/Imagenes/Proyecto/logo.png" Width="50%" />
+          
+        </div>
+      </div>
+    </div>
+            
+       
+           <div class="row">
+               <div class="col-3" style="background-color:#333A41 ;height:100%;text-align:center" >
+
+                <asp:Image ID="Image1" runat="server" ImageUrl="-" Width="50%" CssClass="rounded-circle"/>
+                
+                <asp:Button ID="but_cerrar" runat="server" OnClick="but_cerrar_Click" Text="Cerrar Sesion" />
+               
+                   <br />
+                   <br />
+                
+                   
+                  <asp:HyperLink ID="HL_inicio_pac"  style="color:white;text-align:center" runat="server" NavigateUrl="~/View/Administrador/indexAdmin.aspx">
+                  <span class="fa fa-home" style="font-size:x-large;font-weight:bold;color:white"></span>
+                   Inicio
+                </asp:HyperLink>
+
+                 <button class="btn btn-dark" style="width:100%" type="button" data-toggle="collapse" data-target="#coll_primero2" aria-expanded="false" aria-controls="coll_primero2">
+                       <span class="fa fa-archive" style="font-size:x-large;font-weight:bold;color:white"></span>
+                        Sedes
+                </button>
+                <div class="collapse" id="coll_primero2">
+                     <asp:HyperLink ID="HLink_Rg_sede" class="dropdown-item" runat="server" NavigateUrl="~/View/Administrador/registrarSede.aspx">
+                                                 <span class="fa fa-book-open" style="font-size:x-large;font-weight:bold;color:gray"></span>
+                        Registrar Sede</asp:HyperLink>
+                    <asp:HyperLink ID="HLink_Ver_sede" class="dropdown-item" runat="server" NavigateUrl="~/View/Administrador/verSedes.aspx">
+                                                <span class="fa fa-book-open" style="font-size:x-large;font-weight:bold;color:gray"></span>
+                    Ver Sedes</asp:HyperLink>
+                </div>
+
+
+                <button class="btn btn-dark" style="width:100%" type="button" data-toggle="collapse" data-target="#coll_primero" aria-expanded="false" aria-controls="coll_primero">
+                       <span class="fa fa-archive" style="font-size:x-large;font-weight:bold;color:white"></span>
+
+                         Especialización Clinícas
+                </button>
+                <div class="collapse" id="coll_primero" style="color:gray">
+                        <asp:HyperLink ID="HyperLink1" class="dropdown-item"  runat="server" NavigateUrl="~/View/Administrador/registrarEspecializacion.aspx">
+                            <span class="fa fa-book-open" style="font-size:x-large;font-weight:bold;color:gray"></span>
+                             Registrar Especialización</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink2" class="dropdown-item" runat="server" NavigateUrl="~/View/Administrador/verEspecializacion.aspx">
+                            <span class="fa fa-book-open" style="font-size:x-large;font-weight:bold;color:gray"></span>
+                             Ver Especialización</asp:HyperLink>
+                  
+                
+                </div>
+               
+                <button class="btn btn-dark" style="width:100%" type="button" data-toggle="collapse" data-target="#coll_primero3" aria-expanded="false" aria-controls="coll_primero3">
+                       <span class="fa fa-archive" style="font-size:x-large;font-weight:bold;color:white"></span>
+                        Doctor
+                </button>
+                <div class="collapse" id="coll_primero3" style="color:gray">
+                     <asp:HyperLink ID="HLink_reg_doctor" class="dropdown-item" runat="server" NavigateUrl="~/View/Administrador/registrarDoctor.aspx">
+                                                 <span class="fa fa-book-open" style="font-size:x-large;font-weight:bold;color:black"></span>
+                    Registrar Doctor</asp:HyperLink>
+                     <asp:HyperLink ID="HLink_ver_doctor" class="dropdown-item" runat="server" NavigateUrl="~/View/Administrador/verDoctores.aspx">
+                                                 <span class="fa fa-book-open" style="font-size:x-large;font-weight:bold;color:black"></span>
+                    Ver Doctor</asp:HyperLink>
+                </div>
+
+                <button class="btn btn-dark" style="width:100%" type="button" data-toggle="collapse" data-target="#coll_primero4" aria-expanded="false" aria-controls="coll_primero4">
+                       <span class="fa fa-archive" style="font-size:x-large;font-weight:bold;color:white"></span>
+                        Farmaceuta
+                </button>
+                <div class="collapse" id="coll_primero4">
+                      <asp:HyperLink ID="HLink_reg_farma" class="dropdown-item" runat="server" NavigateUrl="~/View/Administrador/registrarFarmaceuta.aspx">
+                                                  <span class="fa fa-book-open" style="font-size:x-large;font-weight:bold;color:black"></span>
+                    Registrar Farmaceuta</asp:HyperLink>
+                      <asp:HyperLink ID="HLink_ver_farma" class="dropdown-item" runat="server" NavigateUrl="~/View/Administrador/verFarmaceuta.aspx">
+                                                  <span class="fa fa-book-open" style="font-size:x-large;font-weight:bold;color:black"></span>
+
+                          Ver Farmaceuta</asp:HyperLink>
+                </div>
+                <button class="btn btn-dark" style="width:100%" type="button" data-toggle="collapse" data-target="#coll_primero5" aria-expanded="false" aria-controls="coll_primero5">
+                       <span class="fa fa-archive" style="font-size:x-large;font-weight:bold;color:white"></span>
+                        Laboratorista
+                </button>
+                <div class="collapse" id="coll_primero5">
+                      <asp:HyperLink ID="HLink_reg_labo" class="dropdown-item" runat="server" NavigateUrl="~/View/Administrador/registrarLaboratorista.aspx">
+                                                  <span class="fa fa-book-open" style="font-size:x-large;font-weight:bold;color:black"></span>
+                    Registrar Laboratorista</asp:HyperLink>
+                      <asp:HyperLink ID="HLink_ver_labo" class="dropdown-item" runat="server" NavigateUrl="~/View/Administrador/verLaboratorista.aspx">
+                                                  <span class="fa fa-book-open" style="font-size:x-large;font-weight:bold;color:black"></span>
+                    Ver Laboratorista</asp:HyperLink>
+                </div>
+                
+                <button class="btn btn-dark" style="width:100%" type="button" data-toggle="collapse" data-target="#coll_primero6" aria-expanded="false" aria-controls="coll_primero6">
+                       <span class="fa fa-archive" style="font-size:x-large;font-weight:bold;color:white"></span>
+                       Paciente
+                </button>
+                <div class="collapse" id="coll_primero6">
+                      <asp:HyperLink ID="HyperLink6" class="dropdown-item" runat="server" NavigateUrl="~/View/Administrador/verPacientes.aspx">
+                                                  <span class="fa fa-book-open" style="font-size:x-large;font-weight:bold;color:black"></span>
+                    Ver Paciente</asp:HyperLink>
+                </div>
+               
+               </div>
+               <div class="col-9">
+                     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                      </asp:ContentPlaceHolder>
+               </div>
+           </div>
+    
+    
+    
+       
+    
+    
+    <div class="container-fluid" >
+        
+         
+        
+ </div>
+    </form>
+</body>
+</html>

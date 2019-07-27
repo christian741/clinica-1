@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="~/Controller/ConPaciente/masterPaciente.master.cs" 
+    Inherits="View_Paciente_masterPaciente" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Inicio Paciente</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link type="text/css" href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+       <link rel="stylesheet" href="../../css/css/all.min.css" />
+
+    <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/popper.min.js" ></script>
+    <script type="text/javascript" src="../../Scripts/popper.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body >
+    <form id="form_administrador" runat="server">
+    <div class="container-fluid" style="background-color:#5DADE2  ">
+          <div class="row">
+            <div class="col" style="color:white;text-align:center;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >
+                 <br />
+                    <h1>PROYECTO CLINICA</h1>
+                    <h2>Area del Paciente</h2>
+                 <br />
+            </div>
+            <div class="col" style="text-align:center;background-color:white">
+              <asp:Image ID="imagen_admin" runat="server" Width="60%" ImageUrl="~/Imagenes/Proyecto/logo.png" />
+            </div>
+          </div>
+    </div>
+            
+       
+           <div class="row"  style="height:100%;">
+               <div class="col-3" style="background-color:#5DADE2;height:inherit;text-align:center" >
+
+                               <asp:Image ID="Image1" runat="server" ImageUrl="" Width="50%" CssClass="rounded-circle" />
+                                   <asp:Button ID="but_cerrar" runat="server" OnClick="but_cerrar_Click" Text="Cerrar Sesion" />
+
+                   <br />
+                   <br />
+                <asp:HyperLink ID="HL_inicio_pac"  style="color:black;text-align:center" runat="server" NavigateUrl="~/View/Paciente/indexPaciente.aspx">
+                  <span class="fa fa-home" style="font-size:x-large;font-weight:bold;color:black"></span>
+                   Inicio
+                </asp:HyperLink>
+                      <br />
+               <asp:HyperLink ID="HL_registro_cita"  style="color:black;text-align:center" runat="server" NavigateUrl="~/View/Paciente/registrarCita.aspx">
+                     <span class="fa fa-book-open" style="font-size:x-large;font-weight:bold;color:black"></span>
+                         Registrar Cita
+                     </asp:HyperLink>   <br />
+                    <asp:HyperLink ID="HPL_mirarCitas"  style="color:black;text-align:center" runat="server" NavigateUrl="~/View/Paciente/mirarCitasRegistradas.aspx">
+                    <span class="fa fa-book-open" style="font-size:x-large;font-weight:bold;color:black"></span>
+                       Citas Registradas
+                </asp:HyperLink>   <br />
+                     <asp:HyperLink ID="HyperLink1"  style="color:black;text-align:center" runat="server" NavigateUrl="~/View/Paciente/Remisiones.aspx">
+                    <span class="fa fa-book-open" style="font-size:x-large;font-weight:bold;color:black"></span>
+                       Remisiones
+                </asp:HyperLink>   <br />
+                      <asp:HyperLink ID="HyperLink2"  style="color:black;text-align:center" runat="server" NavigateUrl="~/View/Paciente/historialCita.aspx">
+                    <span class="fa fa-book-open" style="font-size:x-large;font-weight:bold;color:black"></span>
+                       Hisorial Clinico
+                </asp:HyperLink>   <br />
+
+                    
+                
+                
+
+
+               </div>
+
+               <div class="col-9">
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                     </asp:ContentPlaceHolder>
+               </div>
+           </div>
+       
+    
+    
+    
+       
+    
+    
+    
+    </form>
+</body>
+</html>

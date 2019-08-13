@@ -6,6 +6,8 @@ using System.Linq;
 using System.Threading;
 using System.Web;
 using System.Web.UI;
+using Core;
+using Utilitarios;
 using System.Web.UI.WebControls;
 
 public partial class View_Doctor_Default : System.Web.UI.Page
@@ -14,7 +16,7 @@ public partial class View_Doctor_Default : System.Web.UI.Page
     {
         
         String hoy = DateTime.Now.ToShortDateString();
-        fecha_hoy.Text = hoy;
+        //fecha_hoy.Text = hoy;
     }
     protected void cargar_Boton_RowDataBound(object sender, GridViewRowEventArgs e)
     {
@@ -50,7 +52,7 @@ public partial class View_Doctor_Default : System.Web.UI.Page
             /*Doctor*/
             String paciente = ((Label)e.Row.FindControl("label_paciente")).Text;
 
-            DataTable tabla2 = new DAOPaciente().ver_Paciente();
+            DataTable tabla2 = new Core_Paciente().verPacientes();
             for (int i = 0; i < tabla2.Rows.Count; i++)
             {
                 if (paciente.Equals(tabla2.Rows[i]["id_usuario"].ToString()))

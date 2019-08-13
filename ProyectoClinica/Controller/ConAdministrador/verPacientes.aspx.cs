@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
+using Core;
+using Utilitarios;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -107,7 +109,7 @@ public partial class View_Administrador_Default : System.Web.UI.Page
     protected void but_act_pac_Click(object sender, EventArgs e)
     {
         ClientScriptManager cd = this.ClientScript;
-        Paciente pac = new Paciente();
+        U_Paciente pac = new U_Paciente();
         if ((DataControlRowState.Edit) > 0)
         {
             pac.Id = Convert.ToInt16(((TextBox)GV_paciente.Rows[GV_paciente.EditIndex].FindControl("ed_txt_id")).Text);
@@ -132,9 +134,9 @@ public partial class View_Administrador_Default : System.Web.UI.Page
 
                 file.PostedFile.SaveAs(Server.MapPath(pac.Foto));
             }
-
-            new DAOPaciente().modificar_paciente(pac);
-            Response.Redirect("~/View/Administrador/verPacientes.aspx");
+            U_Registro modificar= new Core_Paciente().Modificar_paciente(pac);
+           
+            Response.Redirect(modificar.Url);
         }
     }
 }

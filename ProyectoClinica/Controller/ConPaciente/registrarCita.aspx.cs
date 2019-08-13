@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Core;
 
 public partial class View_Paciente_Default : System.Web.UI.Page
 {
@@ -96,7 +97,7 @@ public partial class View_Paciente_Default : System.Web.UI.Page
         cita.Fecha_cita = DDL_fecha.SelectedValue;
         cita.Razon = text_razon.Text;
         cita.Session = Session.SessionID;
-        DataTable validar_cita = new DAOPaciente().validar_citas(DDL_fecha.SelectedValue, Convert.ToInt32(Session["usuario"].ToString()));
+        DataTable validar_cita = new Core_Paciente().validar_citas(DDL_fecha.SelectedValue, Convert.ToInt32(Session["usuario"].ToString()));
         if (validar_cita.Rows.Count>0)
         {
             Label_error_especial.Text = "Lo siento ya realizo una cita para esta fecha";
@@ -107,7 +108,7 @@ public partial class View_Paciente_Default : System.Web.UI.Page
         }
         else
         {
-            DataTable cuenta = new DAOPaciente().contar_citas( Convert.ToInt32(Session["usuario"].ToString()));
+            DataTable cuenta = new Core_Paciente().contar_citas( Convert.ToInt32(Session["usuario"].ToString()));
             if (Convert.ToInt32(cuenta.Rows[0]["cuenta"].ToString())>1)
             {
                 Label_error_especial.Text = "Lo siento no puede realizar mas de 2 citas medicas";

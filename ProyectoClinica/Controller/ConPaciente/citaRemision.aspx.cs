@@ -4,6 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using Utilitarios;
+using Core;
 using System.Web.UI.WebControls;
 
 public partial class View_Paciente_Default : System.Web.UI.Page
@@ -101,7 +103,7 @@ public partial class View_Paciente_Default : System.Web.UI.Page
         cita.Razon = text_razon.Text;
         cita.Session = Session.SessionID;
         new DAOCita().insertar_Cita(cita);
-        new DAOPaciente().remision_cita_realizada(Convert.ToInt32(Session["remision2"].ToString()));
+        new Core_Paciente().remision_cita_realizada(Convert.ToInt32(Session["remision2"].ToString()));
         Session["remision"] = null;
         Session["remision2"] = null;
 

@@ -154,7 +154,7 @@
         
     </asp:GridView>
     </div>
-    <asp:ObjectDataSource ID="OBDS_paciente" runat="server" SelectMethod="ver_Paciente" TypeName="DAOPaciente"></asp:ObjectDataSource>
+    <asp:ObjectDataSource ID="OBDS_paciente" runat="server" SelectMethod="verPacientes" TypeName="Core.Core_Paciente"></asp:ObjectDataSource>
  
 </asp:Content>
 

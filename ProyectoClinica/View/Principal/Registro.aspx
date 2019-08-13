@@ -37,7 +37,7 @@
                    <div class="col">     
                         
                         <asp:Label ID="label_cedula_reg" runat="server" Text="Cédula: "></asp:Label>
-                        <asp:TextBox ID="text_cedula_reg" placeholder="Digite su Cédula" TextMode="Number" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="text_cedula_reg" placeholder="Digite su Cédula" TextMode="Number" MaxLength="10" runat="server"></asp:TextBox>
                         <asp:Label ID="label_error_ced" runat="server" Text=""> </asp:Label><br /><br />
 
                          <asp:Label ID="label_apellido" runat="server" Text="Apellido: "></asp:Label>

@@ -4,6 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using Utilitarios;
+using Core;
 using System.Web.UI.WebControls;
 
 public partial class View_Paciente_Default : System.Web.UI.Page
@@ -30,7 +32,7 @@ public partial class View_Paciente_Default : System.Web.UI.Page
         }
         if (e.CommandName.ToString().Equals("quitar"))
         {
-            new DAOPaciente().quitar_remision(Convert.ToInt32(e.CommandArgument.ToString()));
+            new Core_Paciente().quitarRemision(Convert.ToInt32(e.CommandArgument.ToString()));
             Response.Redirect("~/View/Paciente/Remisiones.aspx");
         }
     }
@@ -54,7 +56,7 @@ public partial class View_Paciente_Default : System.Web.UI.Page
             String fecha = ((Label)e.Row.FindControl("label_fecha")).Text;
             if (DateTime.Now> Convert.ToDateTime(fecha))
             {
-                new DAOPaciente().actualizar_remision(id_remision);
+                new Core_Paciente().actualizaRemision(id_remision);
             }
             Button btn1 = ((Button)e.Row.FindControl("but_crear_cita"));
             Button btn2 = ((Button)e.Row.FindControl("but_quitar"));

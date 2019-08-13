@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ProyectoClinica", "ProyectoClinica\", "{705D9E9E-407A-4BA3-AE96-5374F0A05830}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		ProjectReferences = "{6beae1df-1062-4b1e-9e64-15b268092380}|Core.dll;{77738088-819b-49de-a6fb-2a15e3c2c1d4}|Utilitarios.dll;{0CB7E142-9360-4B57-90CC-F2E08316F8EB}|Data.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_62277"
 		Debug.AspNetCompiler.PhysicalPath = "ProyectoClinica\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62277\"
@@ -25,13 +26,34 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ProyectoClinica", "Proyecto
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "..\Core\Core.csproj", "{6BEAE1DF-1062-4B1E-9E64-15B268092380}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "..\Data\Data.csproj", "{0CB7E142-9360-4B57-90CC-F2E08316F8EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilitarios", "Utilitarios\Utilitarios.csproj", "{77738088-819B-49DE-A6FB-2A15E3C2C1D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{705D9E9E-407A-4BA3-AE96-5374F0A05830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{705D9E9E-407A-4BA3-AE96-5374F0A05830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{705D9E9E-407A-4BA3-AE96-5374F0A05830}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{705D9E9E-407A-4BA3-AE96-5374F0A05830}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{6BEAE1DF-1062-4B1E-9E64-15B268092380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BEAE1DF-1062-4B1E-9E64-15B268092380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BEAE1DF-1062-4B1E-9E64-15B268092380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BEAE1DF-1062-4B1E-9E64-15B268092380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CB7E142-9360-4B57-90CC-F2E08316F8EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CB7E142-9360-4B57-90CC-F2E08316F8EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CB7E142-9360-4B57-90CC-F2E08316F8EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CB7E142-9360-4B57-90CC-F2E08316F8EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77738088-819B-49DE-A6FB-2A15E3C2C1D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77738088-819B-49DE-A6FB-2A15E3C2C1D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77738088-819B-49DE-A6FB-2A15E3C2C1D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77738088-819B-49DE-A6FB-2A15E3C2C1D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

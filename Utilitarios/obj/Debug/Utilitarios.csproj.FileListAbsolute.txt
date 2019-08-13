@@ -1,0 +1,6 @@
+C:\Users\Familia Díaz Rendón\source\repos\Website\ProyectoClinica\Utilitarios\bin\Debug\Utilitarios.dll
+C:\Users\Familia Díaz Rendón\source\repos\Website\ProyectoClinica\Utilitarios\bin\Debug\Utilitarios.pdb
+C:\Users\Familia Díaz Rendón\source\repos\Website\ProyectoClinica\Utilitarios\obj\Debug\Utilitarios.csprojAssemblyReference.cache
+C:\Users\Familia Díaz Rendón\source\repos\Website\ProyectoClinica\Utilitarios\obj\Debug\Utilitarios.csproj.CoreCompileInputs.cache
+C:\Users\Familia Díaz Rendón\source\repos\Website\ProyectoClinica\Utilitarios\obj\Debug\Utilitarios.dll
+C:\Users\Familia Díaz Rendón\source\repos\Website\ProyectoClinica\Utilitarios\obj\Debug\Utilitarios.pdb

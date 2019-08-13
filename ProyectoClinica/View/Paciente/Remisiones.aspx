@@ -73,9 +73,9 @@
 
     </asp:GridView>
     </div>
-    <asp:ObjectDataSource ID="OBDS_remision" runat="server" SelectMethod="traerRemision" TypeName="DAOPaciente">
+    <asp:ObjectDataSource ID="OBDS_remision" runat="server" SelectMethod="traerRemisiones" TypeName="Core.Core_Paciente">
         <SelectParameters>
-            <asp:SessionParameter Name="id_usuario" SessionField="usuario" Type="Int32" />
+            <asp:SessionParameter Name="id" SessionField="usuario" Type="Int32" />
         </SelectParameters>
     </asp:ObjectDataSource>
 </asp:Content>
